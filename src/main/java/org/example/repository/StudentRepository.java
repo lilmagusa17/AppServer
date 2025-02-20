@@ -7,7 +7,7 @@ public class StudentRepository {
 
     private List<Student> students = new ArrayList<>();
 
-    public StudentRepository(CourseRepository courseRepository) {
+    public StudentRepository() {
         this.students = new ArrayList<>();
 
     }

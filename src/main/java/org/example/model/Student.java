@@ -1,5 +1,8 @@
 package org.example.model;
 
+import org.example.repository.CourseRepository;
+import org.example.repository.StudentRepository;
+
 import java.util.List;
 
 public class Student {
@@ -18,6 +21,8 @@ public class Student {
     public Student() {
 
     }
+
+
 
     //Getters y setters
     public void setCode(String code) {
