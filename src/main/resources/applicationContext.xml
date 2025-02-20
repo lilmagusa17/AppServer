@@ -7,4 +7,23 @@
     <bean id="messageService" class="org.example.services.MessageService" />
     <bean id="helloService" class="org.example.services.HelloService" />
 
+    <!-- S5 & S6 -->
+
+    <!--Repositorios-->
+    <bean id="studentRepository" class="org.example.repository.StudentRepository">
+        <constructor-arg ref="courseRepository"/>
+    </bean>
+
+
+    <bean id="courseRepository" class="org.example.repository.CourseRepository"/>
+
+    <!--Service-->
+    <bean id="studentService" class="org.example.services.StudentService" init-method="initializeData">
+            <constructor-arg ref="studentRepository"/>
+            <constructor-arg ref="courseRepository"/>
+
+    </bean>
+    <bean id="courseService" class="org.example.services.CourseService"/>
+
+
 </beans>
