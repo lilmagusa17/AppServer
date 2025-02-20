@@ -1,13 +1,16 @@
 package org.example.services;
 
 
+import jakarta.annotation.PostConstruct;
 import org.example.model.Course;
 import org.example.model.Student;
 import org.example.repository.CourseRepository;
 import org.example.repository.StudentRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StudentService {
 
     private StudentRepository studentRepository;
@@ -29,6 +32,7 @@ public class StudentService {
         }
     }
 
+    @PostConstruct
     public void initializeData(){
         var student1 = new Student();
         student1.setCode("A00111111");
